@@ -1,0 +1,82 @@
+body{
+/*
+    background-image: url(img/food.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    
+*/
+}
+
+.column{
+    padding-left:50px;
+    margin: 0 auto;
+    
+}
+
+.column h5{
+    text-decoration: underline;
+}
+
+.row{
+    width: 800px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.header{
+    padding: 20px;
+    margin: 5px auto;
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    
+}
+
+.buttons #addNew{
+    margin-right: 14px;
+    width: 150px;
+}
+
+
+#modal{
+    display: none;
+}
+
+#icon{
+    padding-left: 4px;
+    padding-top: 5px;
+    color: #17A2B8;
+    outline: none;
+}
+
+.fruit{
+    padding: 10px;
+}
+
+.vegetables{
+    padding: 10px;
+}
+
+.meat{
+    padding: 10px;
+}
+
+.frozen{
+    padding: 10px;
+}
+
+.dairy{
+    padding: 10px;
+}
+
+.bakery{
+    padding: 10px;
+}
+
+.other{
+    padding: 10px;
+}

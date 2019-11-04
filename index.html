@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Food App</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="styling.css">
+    </head>
+    
+    <body>
+        
+        <div class="container-fluid">
+        <div class="header">
+        <h1>Grocery List</h1>
+        </div>
+        
+        <div class="buttons">
+            <!-- Add new item button -->
+            <button type="button" class="btn btn-outline-info" id="addNew">Add new item</button>
+            
+             <!-- Print list button -->
+             <button type="button" class="btn btn-outline-info" id="print"><ion-icon name="print"></ion-icon></button>
+        </div>
+        
+            
+            <!-- Modal -->
+  <div class="modal fade" id="modal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">New Item</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+          <form>
+          <input type="text" name="item" id="itemTxt" placeholder="Item">
+              <br><br>
+              <h6>Category:</h6>
+              
+
+             <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="categoryRadio" value="fruit">
+              <label class="form-check-label" for="fruitRadio">Fruit</label>
+            </div>
+              
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="categoryRadio" value="vegetables">
+              <label class="form-check-label" for="vegetablesRadio">Vegetable</label>
+            </div>
+              
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="categoryRadio" value="meat">
+              <label class="form-check-label" for="meatRadio">Meat</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="categoryRadio" value="frozen">
+              <label class="form-check-label" for="frozenRadio">Frozen</label>
+            </div>
+                 <br>   
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="categoryRadio" value="dairy">
+              <label class="form-check-label" for="dairyRadio">Dairy</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="categoryRadio" value="bakery">
+              <label class="form-check-label" for="bakeryRadio">Bakery</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="categoryRadio" value="other">
+              <label class="form-check-label" for="otherRadio">Other</label>
+            </div>
+
+              
+          
+          </form>
+        </div>
+        <div class="modal-footer">
+             <!-- Add new item button -->
+        <button type="button" class="btn btn-outline-info" id="submitNew">Add new item</button>
+          <button type="button" class="btn btn-outline-info" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+            
+            
+   <div class="foodContainer">     
+   <div class="row">
+      <div class="column">
+       
+       <div class="fruit">
+           <h5>Fruit</h5>
+          
+        </div>
+          
+          <div class="vegetables">
+              <h5>Vegetables</h5>
+                            
+          </div>
+          
+          <div class="meat">
+              <h5>Meat</h5>
+             
+
+              <div class="checkBox">    
+              <input type="checkbox" id="Check" name="Check">
+              <label for="Label" >Chicken</label>
+                  <!-- Delete item button -->
+             <button type="button" class="btn btn-default" id="icon"><ion-icon name="close"></ion-icon></button>
+            </div>
+
+          
+          </div>
+       </div>
+       
+      <div class="column">
+       <div class="frozen">
+           <h5>Frozen</h5>
+           
+            <div class="checkBox">    
+              <input type="checkbox" id="Check" name="Check">
+              <label for="Label" >Peas</label>
+                <!-- Delete item button -->
+             <button type="button" class="btn btn-default" id="icon"><ion-icon name="close"></ion-icon></button>
+                
+                
+    
+            </div>
+           
+          </div>
+          
+          <div class="dairy">
+              <h5>Dairy</h5>
+              
+          </div>
+          
+          <div class="bakery">
+              <h5>Bakery</h5>
+              
+               <div class="checkBox">    
+              <input type="checkbox" id="Check" name="Check">
+              <label for="Label">Whole Wheat Bread</label>
+                   <!-- Delete item button -->
+             <button type="button" class="btn btn-default" id="icon"><ion-icon name="close"></ion-icon></button>
+            </div>
+              
+          </div>
+          
+          
+          
+          <div class="other">
+              <h5>Other</h5>
+              
+               <div class="checkBox">    
+              <input type="checkbox" id="Check" name="Check">
+              <label for="Label">Dish Soap</label>
+                   <!-- Delete item button -->
+             <button type="button" class="btn btn-default" id="icon"><ion-icon name="close"></ion-icon></button>
+            </div>
+              
+          </div>
+       </div>
+    </div>
+    </div>
+        
+        
+</div>
+        
+        
+        
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+        <script src="js/bootstrap.min.js"></script>
+        
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        
+        <script src="jquery.js"></script>
+    </body>
+</html>
